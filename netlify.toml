@@ -1,0 +1,12 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Serve the Vue app for every path so the client router can send unknown pages home.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
